@@ -1,0 +1,285 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    tools:context="snow.com.weatherapp.main.MainActivity"
+    tools:ignore="MergeRootFrame" >
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp" >
+
+                <TextView
+                    android:id="@+id/locationText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:text="@string/location_text"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                <TextView
+                    android:id="@+id/dateText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/locationText"
+                    android:layout_below="@+id/locationText"
+                    android:text="@string/date_text"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                <TextView
+                    android:id="@+id/currentTempText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/dateText"
+                    android:layout_below="@+id/dateText"
+                    android:text="@string/current_temp_text"
+                    android:textSize="72sp" />
+
+                <ImageView
+                    android:id="@+id/iconCurrentImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/dateText"
+                    android:contentDescription="@string/content_desc_icon_current"
+                    android:src="@mipmap/ic_dunno" />
+
+                <TextView
+                    android:id="@+id/maxMinTempText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/currentTempText"
+                    android:layout_alignParentLeft="true"
+                    android:text="@string/max_min_temp_text"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                <TextView
+                    android:id="@+id/weatherDescText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/maxMinTempText"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="3dp"
+                    android:text="@string/weather_desc_text"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                <TextView
+                    android:id="@+id/windSpeedText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/weatherDescText"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="3dp"
+                    android:text="@string/wind_speed_text"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                <ImageView
+                    android:id="@+id/iconWindDirection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/weatherDescText"
+                    android:layout_toRightOf="@+id/windSpeedText"
+                    android:layout_marginLeft="3dp"
+                    android:contentDescription="@string/content_desc_icon_wind"
+                    android:src="@mipmap/ic_wind"/>
+
+                <TextView
+                    android:id="@+id/pressureText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/windSpeedText"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="3dp"
+                    android:text="@string/pressure_text"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp" >
+
+                <TextView
+                    android:id="@+id/forecastDateDay1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/forecast_date_day_1" />
+
+                <ImageView
+                    android:id="@+id/forecastIconDay1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/forecastDateDay1"
+                    android:contentDescription="@string/content_desc_forecast_icon_day_1"
+                    android:src="@mipmap/ic_dunno_small" />
+
+                <TextView
+                    android:id="@+id/forecastTempDay1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/forecastIconDay1"
+                    android:text="@string/forecast_temp_day_1" />
+
+                <TextView
+                    android:id="@+id/forecastDateDay2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/forecast_date_day_2" />
+
+                <ImageView
+                    android:id="@+id/forecastIconDay2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/forecastDateDay2"
+                    android:layout_centerHorizontal="true"
+                    android:contentDescription="@string/content_desc_forecast_icon_day_2"
+                    android:src="@mipmap/ic_dunno_small" />
+
+                <TextView
+                    android:id="@+id/forecastTempDay2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/forecastIconDay2"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/forecast_temp_day_2" />
+
+                <TextView
+                    android:id="@+id/forecastDateDay3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/forecast_date_day_3" />
+
+                <ImageView
+                    android:id="@+id/forecastIconDay3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/forecastDateDay3"
+                    android:contentDescription="@string/content_desc_forecast_icon_day_3"
+                    android:src="@mipmap/ic_dunno_small" />
+
+                <TextView
+                    android:id="@+id/forecastTempDay3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/forecastIconDay3"
+                    android:text="@string/forecast_temp_day_3" />
+
+                <TextView
+                    android:id="@+id/forecastDateDay4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/forecastTempDay1"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/forecast_date_day_4" />
+
+                <ImageView
+                    android:id="@+id/forecastIconDay4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/forecastDateDay4"
+                    android:contentDescription="@string/content_desc_forecast_icon_day_4"
+                    android:src="@mipmap/ic_dunno_small" />
+
+                <TextView
+                    android:id="@+id/forecastTempDay4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/forecastIconDay4"
+                    android:text="@string/forecast_temp_day_4" />
+
+                <TextView
+                    android:id="@+id/forecastDateDay5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/forecastTempDay2"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/forecast_date_day_5" />
+
+                <ImageView
+                    android:id="@+id/forecastIconDay5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/forecastDateDay5"
+                    android:layout_centerHorizontal="true"
+                    android:contentDescription="@string/content_desc_forecast_icon_day_5"
+                    android:src="@mipmap/ic_dunno_small" />
+
+                <TextView
+                    android:id="@+id/forecastTempDay5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/forecastIconDay5"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/forecast_temp_day_5" />
+
+                <TextView
+                    android:id="@+id/forecastDateDay6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/forecastTempDay3"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/forecast_date_day_6" />
+
+                <ImageView
+                    android:id="@+id/forecastIconDay6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/forecastDateDay6"
+                    android:contentDescription="@string/content_desc_forecast_icon_day_6"
+                    android:src="@mipmap/ic_dunno_small" />
+
+                <TextView
+                    android:id="@+id/forecastTempDay6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/forecastIconDay6"
+                    android:text="@string/forecast_temp_day_6" />
+
+                <TextView
+                    android:id="@+id/OWMText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/forecastTempDay6"
+                    android:text="@string/OWM_text"
+                    />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>

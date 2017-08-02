@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_search"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="snow.com.weatherapp.main.SearchActivity"
+    >
+
+    <TextView
+        android:id="@+id/citySearchText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/city_search_text"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/cityEnterEdidText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/citySearchText"
+        android:layout_below="@+id/citySearchText"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:hint="@string/city_enter_edit_text" />
+    <requestFocus />
+
+    <Button
+        android:id="@+id/searchButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/cityEnterEdidText"
+        android:layout_alignBottom="@+id/cityEnterEdidText"
+        android:layout_toRightOf="@+id/cityEnterEdidText"
+        android:text="@string/search_button_text" />
+
+
+    <TextView
+        android:id="@+id/resultText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/cityEnterEdidText"
+        android:layout_below="@+id/cityEnterEdidText"
+        android:layout_marginTop="15dp"
+        android:text="@string/result_text"
+        android:textSize="20sp" />
+
+    <ListView
+        android:id="@+id/resultListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/resultText"
+        android:layout_below="@+id/resultText"
+        android:layout_marginTop="15dp" >
+    </ListView>
+
+</RelativeLayout>
